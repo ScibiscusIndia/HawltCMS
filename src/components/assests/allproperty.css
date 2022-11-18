@@ -1,0 +1,55 @@
+.table-data{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.search-bar{
+    margin-left: 0px;
+    padding-bottom: 20px;
+}
+.search-bar ul{
+    list-style: none;
+    display: flex;
+}
+.search-bar input{
+    width: 45vw;
+    height: 6vh;
+    border-radius: 5px;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    /* border-color:gray; */
+}
+.search-button{
+    height: 6vh;
+    border-radius: 5px;
+    background-color: white;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    /* border-color: gray; */
+    border-style: none;
+}
+.search-log{
+    padding-left: 10px;
+}
+/* .search-text{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-color: white;
+} */
+
+/* head content */
+.head-text{
+    padding-left: 35px;
+    padding-bottom: 25px;
+    /* background-color: red; */
+}
+
+/* add property styles */
+#save-button-90{
+    /* background-color: red; */
+    width: 60vh;
+}
+.save-but-02{
+    /* background-color: red; */
+    float: right;
+    padding-right: 10px;
+}
+.save-but-02 button{
+    width: 10vw;
+}
