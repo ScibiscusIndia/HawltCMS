@@ -18,7 +18,7 @@ export const Tabledata = () => {
                 });
             }
         });
-        console.log(propertylist)
+        // console.log(propertylist)
     }, [])
 
   return (
