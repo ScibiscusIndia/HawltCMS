@@ -6,6 +6,8 @@ import {Allproperty} from './components/Propertycomponent/Allproperty'
 import {Addproperty} from './components/Propertycomponent/Addproperty'
 import {Allbookings} from './components/Propertycomponent/Allbookings'
 import { Allusers } from './components/Propertycomponent/Allusers';
+import {Newlyprop} from './components/Propertycomponent/Newlyprop';
+import { Dashboard } from './components/Propertycomponent/Dashboard';
 
 function App() {
   return (
@@ -14,10 +16,12 @@ function App() {
      <Maintab/>
 
      <Routes>
+      <Route path ='/' element={<Dashboard/>} />
       <Route path ='/allproperty' element={<Allproperty/>} />
       <Route path ='/addproperty' element={<Addproperty/>} />
       <Route path ='/allbookings' element={<Allbookings/>} />
       <Route path ='/usersdetails_90-Proxyserver@8ujK' element={<Allusers/>} />
+      <Route path ='/Dashboard/newproperties_inthe-House54' element={<Newlyprop/>} />
      </Routes>
     </div>
   );

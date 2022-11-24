@@ -6,6 +6,7 @@ import {collection, getDocs} from 'firebase/firestore';
 
 export const Allusers = () => {
     const [users, setUsers] = useState([]);
+    const [count, setCount] = useState(0);
     const usersCollectionRef = collection(db2, "Users")
 
     useEffect(() => {
@@ -21,7 +22,7 @@ export const Allusers = () => {
     <div>
          <div className='head-text'>
             <h1 class="display-5">Active users details</h1>
-            <p>Manage all your active users in one place</p>
+            <p>Manage all your active users at one place</p>
         </div>
         <div className="search-bar">
             <ul>

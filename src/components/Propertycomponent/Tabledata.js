@@ -3,6 +3,8 @@ import {useState, useEffect} from 'react';
 import { set, ref, onValue, remove, update } from 'firebase/database';
 import {db} from './firebase';
 
+export var totalHostedProp = 0;
+
 export const Tabledata = () => {
     //read
     const [ propertylist, setPropertylist ] = useState([]);
@@ -18,8 +20,12 @@ export const Tabledata = () => {
                 });
             }
         });
+        setCount(propertylist.length);
+        totalHostedProp = count;
         // console.log(propertylist)
     }, [])
+
+    
 
   return (
     <div>

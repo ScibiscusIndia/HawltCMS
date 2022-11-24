@@ -283,7 +283,7 @@ export const Addproperty = () => {
       <div class="container text-center">
         <div class="row">
           <div class="col"><br /><br />
-            <button type="submit" id="save-button-90" class="btn btn-dark">Save</button>
+            <button type="button" id="save-button-90" onClick={writeToDatabase} class="btn btn-dark">Save</button>
             <br /><br />
           </div>
         </div>
