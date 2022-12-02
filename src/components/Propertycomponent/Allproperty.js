@@ -1,10 +1,12 @@
 import React from 'react'
 import { Tabledata } from './Tabledata'
 import '../assests/allproperty.css'
+import { Maintab } from '../Maintab'
 
 export const Allproperty = () => {
   return (
     <>
+    <Maintab/>
     <div className='head-text'>
       <h1 class="display-5">All property</h1>
       <p>Manage all your property at one place</p>

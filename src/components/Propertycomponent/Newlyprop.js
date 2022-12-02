@@ -2,6 +2,7 @@ import React from 'react'
 import {db2} from './firebase';
 import {useState, useEffect} from 'react';
 import {collection, getDocs} from 'firebase/firestore';
+import { Maintab } from '../Maintab';
 
 export const Newlyprop = () => {
     const [newprop, setNewprop] = useState([]);
@@ -19,6 +20,7 @@ export const Newlyprop = () => {
     // console.log(newprop);
   return (
     <div>
+        <Maintab/>
         <div className='head-text'>
             <h1 class="display-5">Newly arrived properties</h1>
             <p>Manage all your properties request at one place</p>
@@ -68,8 +70,17 @@ export const Newlyprop = () => {
                                             </ul>
                                         </div>
                                     </td>
-                                    <td>{ele.userModel.username }</td>
+                                    {ele.userModel == null ?
+                                    <>
+                                    <td>null</td>
+                                    <td>null</td></>
+                                    :
+                                    <>
+                                    <td>{ele.userModel.username}</td>
                                     <td>{ele.userModel.number}</td>
+                                    </>
+                                }
+                                    
                                 </tr>
                                 </>
                             )

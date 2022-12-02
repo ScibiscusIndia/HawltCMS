@@ -8,12 +8,13 @@ import {Allbookings} from './components/Propertycomponent/Allbookings'
 import { Allusers } from './components/Propertycomponent/Allusers';
 import {Newlyprop} from './components/Propertycomponent/Newlyprop';
 import { Dashboard } from './components/Propertycomponent/Dashboard';
+import { Login } from './components/Propertycomponent/Login';
 
 function App() {
   return (
     <div>
      <Navbar/>
-     <Maintab/>
+     {/* <Maintab/> */}
 
      <Routes>
       <Route path ='/' element={<Dashboard/>} />
@@ -22,6 +23,7 @@ function App() {
       <Route path ='/allbookings' element={<Allbookings/>} />
       <Route path ='/usersdetails_90-Proxyserver@8ujK' element={<Allusers/>} />
       <Route path ='/Dashboard/newproperties_inthe-House54' element={<Newlyprop/>} />
+      <Route path ='/Login' element={<Login/>} />
      </Routes>
     </div>
   );

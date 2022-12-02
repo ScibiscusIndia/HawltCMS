@@ -5,6 +5,7 @@ import {useState, useEffect} from 'react';
 import { collection, query, where, getDocs } from "firebase/firestore";
 import {useCollectionData} from "react-firebase-hooks/firestore";
 import { set, ref, onValue, remove, update } from 'firebase/database';
+import { Maintab } from '../Maintab';
 
 export const Dashboard = () => {
     const [users, setUsers] = useState([]);
@@ -62,6 +63,7 @@ export const Dashboard = () => {
 
   return (
     <div>
+        <Maintab/>
         <div className='head-text'>
             <h1 class="display-5">Dashboard</h1>
             <p>Manage all your activity at one place</p>

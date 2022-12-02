@@ -5,6 +5,7 @@ import {  doc} from 'firebase/firestore';
 import {useCollectionData} from "react-firebase-hooks/firestore";
  import { collection, query, where, getDocs } from "firebase/firestore";
 import { async } from '@firebase/util';
+import { Maintab } from '../Maintab';
 
 export const Allbookings =  () => {
     const [bookings, setBookings] =  useState([]);
@@ -21,6 +22,7 @@ export const Allbookings =  () => {
 
   return (
     <div>
+        <Maintab/>
        <div className='head-text'>
             <h1 class="display-5">All bookings.</h1>
             <p>Manage all your active bookings or Transactions at one place</p>
@@ -50,7 +52,7 @@ export const Allbookings =  () => {
                                 <>
                                 <tr>
                                     <td scope="row">{index+1}</td>
-                                    <td>{ele.username}</td>
+                                    <td>{ele.username == '' ? "null" : ele.username}</td>
                                     <td>{ele.mobile_number}</td>
                                     <td>{ele.property_name}</td>
                                     <td>{ele.id}</td>

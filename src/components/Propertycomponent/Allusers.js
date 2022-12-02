@@ -2,6 +2,7 @@ import React from 'react'
 import {db2} from './firebase';
 import {useState, useEffect} from 'react';
 import {collection, getDocs} from 'firebase/firestore';
+import { Maintab } from '../Maintab';
 
 
 export const Allusers = () => {
@@ -20,6 +21,7 @@ export const Allusers = () => {
 
   return (
     <div>
+        <Maintab/>
          <div className='head-text'>
             <h1 class="display-5">Active users details</h1>
             <p>Manage all your active users at one place</p>

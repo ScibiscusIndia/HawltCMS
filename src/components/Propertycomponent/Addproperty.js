@@ -3,10 +3,12 @@ import '../assests/allproperty.css'
 import { db } from './firebase';
 import { uid } from 'uid';
 import { set, ref, onValue, remove, update } from 'firebase/database';
+import { Maintab } from '../Maintab';
 
 export const Addproperty = () => {
   const [name, setName] = useState('');
   const [hostname, setHostname] = useState('');
+  const [hosterNo, setHosterNo] = useState('');
   const [address, setAddress] = useState({state: '', area: ''});
   const [vasto, setVasto] = useState({floors:'',bedroom:'',sqrft:'', gender:'Male'});
   const [leftinput, setLeftinput] = useState({reviewname:'', rmsg:'', lct:'', s:'', d:'', t:'', m:''})
@@ -34,6 +36,7 @@ export const Addproperty = () => {
       name : name,
       address : {country : 'India', state : address.state, area : address.area},
       hostedby : hostname,
+      hosterNo : hosterNo,
       floors : vasto.floors,
       bedroom : vasto.bedroom,
       squarefeet : vasto.sqrft,
@@ -54,6 +57,7 @@ export const Addproperty = () => {
 
   return (
     <div>    
+      <Maintab/>
       {/* --- */}
       <div class="container">
         <div class="row">
@@ -81,7 +85,7 @@ export const Addproperty = () => {
           </div>
           <div class="col">
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Hosting name</label>
+              <label for="exampleFormControlInput1" class="form-label">Hoster's name</label>
               <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Your name" value={hostname} onChange={e => setHostname(e.target.value)} />
             </div>
           </div>
@@ -140,6 +144,17 @@ export const Addproperty = () => {
               <option value="Colive">Co live</option>
              </select>
          
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* ---------- */}
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Hoster's mobile number</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="123456990" value={hosterNo} onChange={e => setHosterNo(e.target.value)} />
             </div>
           </div>
         </div>
